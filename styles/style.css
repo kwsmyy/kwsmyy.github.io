@@ -218,6 +218,11 @@ body {
 
 /*レスポンシブ対応*/
 @media screen and (max-width: 680px){
+    #title{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
     #menu{
         margin: 25vh 0;
     }
@@ -244,7 +249,3 @@ body {
         width:30%;
     }
 }
-/*レスポンシブ対応*/
-
-
-
