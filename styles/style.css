@@ -103,12 +103,14 @@ body {
 }
 
 .profileimage img{
-    width:70%;
+    width:50%;
 }
 
 .profiletext{
-    padding:5%;
+    padding:5% 0 0 0;
     color: linen;
+    font-size: 15px;
+    margin-left: -20px;
 }
 
 .profiletext a{
@@ -234,5 +236,11 @@ body {
     #menubtn img{
         width: 100px;
     }
+    .profiletext{
+        font-size: 10px;
+    }
 }
 /*レスポンシブ対応*/
+
+
+
