@@ -1,0 +1,229 @@
+body {
+    font-family: 'Montserrat', sans-serif, "游ゴシック体";
+    background-image: url(../images/top.JPG);
+    background-attachment: fixed;
+}
+
+#title{
+    padding: 3vh;
+    margin: 2vh auto 7vh auto;
+    text-align: center;
+    color: linen;
+    font-size: 3vw;
+
+}
+
+#menu{
+    display: grid;
+    grid-template-columns: repeat(13, minmax(0,1fr));
+    place-items: center;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+}
+
+#menubtn{
+    grid-row: 1;
+    grid-column: 7;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#menubtn img{
+    max-width: 20vw;
+    min-width: 120px;
+}
+
+.menuitem{
+    grid-row: 1;
+    grid-column: 7;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 50%;
+    background: linen;
+    opacity: 0.8;
+    z-index: 1;
+    transition: 1s;
+    transition: transform 1000ms;
+}
+
+.menuitem:hover{
+    opacity: 0.3;
+
+}
+
+.menuitem a{
+    text-decoration: none;
+    position: relative;
+    padding: 20% 0;
+    color:lightslategrey;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menuitem p{
+    text-decoration: none;
+    position: relative;
+    padding: 20% 0;
+    color:lightslategrey;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#profilepage{
+    background-color: #959dbad1;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height:100vh;
+    transition: 0.8s;
+}
+
+#profileclosebtn{
+    font-size: 70px;
+    padding: 1%;
+    color: linen;
+    cursor: pointer;
+}
+
+#profileclosebtn:hover{
+    opacity:0.5;
+}
+
+.profileimage{
+    padding:5%;
+    text-align: center;
+}
+
+.profileimage img{
+    width:70%;
+}
+
+.profiletext{
+    padding:5%;
+    color: linen;
+}
+
+.profiletext a{
+    text-decoration: none;
+    color:#2980af;
+}
+
+.profiletext a:hover{
+    opacity: 0.5;
+}
+
+
+#contactpage{
+    background-color: #959dbad1;
+    position: fixed;
+    top: 0;
+    left:-200vw;
+    width: 100vw;
+    height:100vh;
+    transition: 0.8s;
+}
+
+#contactclosebtn{
+    font-size: 70px;
+    padding: 1%;
+    color: linen;
+    cursor: pointer;
+}
+
+#contactclosebtn:hover{
+    opacity: 0.5;
+}
+
+.contacttext p{
+    text-align: center;
+    color: linen;
+    margin:15vh;
+}
+
+
+/*メニュー展開*/
+.openmenu .menuitem:nth-child(6) {
+    transform: rotate(90deg) translateY(calc( -2em - 20vw )) rotate(-90deg);
+    transition-delay: 0.1s;
+}
+
+.openmenu .menuitem:nth-child(5) {
+    transform: rotate(45deg) translateY(calc( -2em - 20vw )) rotate(-45deg);
+    transition-delay: 0.2s;
+  }
+
+.openmenu .menuitem:nth-child(4) {
+    transform: rotate(-0deg) translateY(calc( -2em - 20vw )) rotate(0deg);
+    transition-delay: 0.3s;
+  }
+
+.openmenu .menuitem:nth-child(3) {
+    transform: rotate(-45deg) translateY(calc( -2em - 20vw )) rotate(45deg);
+    transition-delay: 0.4s;
+  }
+
+.openmenu .menuitem:nth-child(2) {
+    transform: rotate(-90deg) translateY(calc( -2em - 20vw )) rotate(90deg);
+    transition-delay: 0.5s;
+  }
+
+
+/*メニュー展開*/
+
+/*open profile page*/
+.openprofile{
+    transform: translateX(100vw);
+    z-index: 100;
+}
+/*open profile page*/
+
+/*open contact page*/
+.opencontact{
+    transform: translateX(200vw);
+    z-index: 100;
+}
+/*open contact page*/
+
+/*下に流れる文字*/
+#flow{
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 20px;
+    animation: flowing 20s linear infinite;
+    color: #859dbad1;
+}
+
+@keyframes flowing{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+/*下に流れる文字*/
+
+/*レスポンシブ対応*/
+@media screen and (max-width: 680px){
+    #menu{
+        margin: 25vh 0;
+    }
+    .menuitem{
+        width: 80px;
+        height: 80px;
+    }
+
+    .menuitem a{
+        font-size: 13px;
+    }
+
+    .menuitem p{
+        font-size: 13px;
+    }
+}
+/*レスポンシブ対応*/
