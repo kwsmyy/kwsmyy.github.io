@@ -130,7 +130,7 @@ body {
     left:-200vw;
     width: 100vw;
     height:100vh;
-    transition: 0.8s;
+    transition: 1.2s;
 }
 
 #contactclosebtn{
@@ -148,6 +148,7 @@ body {
     text-align: center;
     color: linen;
     margin-bottom:80px;
+    font-size: 20px;
 }
 
 
