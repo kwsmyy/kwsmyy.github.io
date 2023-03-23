@@ -1,40 +1,40 @@
 'use strict';
 
-const menubtn = document.getElementById('menubtn');
+const menuBtn = document.getElementById('menubtn');
 const menu = document.getElementById('menu');
 
 const profile = document.getElementById('profile');
-const profilepage = document.getElementById('profilepage');
-const profileclosebtn = document.getElementById('profileclosebtn');
+const profilePage = document.getElementById('profilepage');
+const profileCloseBtn = document.getElementById('profileclosebtn');
 
 const contact = document.getElementById('contact');
-const contactpage = document.getElementById('contactpage');
-const contactclosebtn = document.getElementById('contactclosebtn');
+const contactPage = document.getElementById('contactpage');
+const contactCloseBtn = document.getElementById('contactclosebtn');
 
-menubtn.addEventListener('click', openmenu);
+menuBtn.addEventListener('click', openmenu);
 
 profile.addEventListener('click', openprofile);
-profileclosebtn.addEventListener('click', closeprofile);
+profileCloseBtn.addEventListener('click', closeprofile);
 
 contact.addEventListener('click', opencontact);
-contactclosebtn.addEventListener('click', closecontact);
+contactCloseBtn.addEventListener('click', closecontact);
 
 function openmenu(){
     menu.classList.toggle('openmenu');
 }
 
 function openprofile(){
-    profilepage.classList.add('openprofile');
+    profilePage.classList.add('openprofile');
 }
 
 function closeprofile(){
-    profilepage.classList.remove('openprofile');
+    profilePage.classList.remove('openprofile');
 }
 
 function opencontact(){
-    contactpage.classList.add('opencontact');
+    contactPage.classList.add('opencontact');
 }
 
 function closecontact(){
-    contactpage.classList.remove('opencontact');
+    contactPage.classList.remove('opencontact');
 }

@@ -1,6 +1,5 @@
 body {
     font-family: 'Montserrat', sans-serif, "游ゴシック体";
-    background-image: url(../images/top.JPG);
     background-attachment: fixed;
 }
 
@@ -9,8 +8,30 @@ body {
     margin: 2vh auto 7vh auto;
     text-align: center;
     color: linen;
-    font-size: 3vw;
+    font-size: 2vw;
 
+}
+
+.video{
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/top.JPG) no-repeat center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video video{
+    min-width: 100%;
+    min-height: 100%;
+    width:auto;
+    height:auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 #menu{
@@ -54,7 +75,6 @@ body {
 
 .menuitem:hover{
     opacity: 0.3;
-
 }
 
 .menuitem a{
@@ -221,6 +241,7 @@ body {
     #title{
         margin-top: 50px;
         margin-bottom: 50px;
+        font-size: 3vw;
     }
 
     #menu{
@@ -249,3 +270,7 @@ body {
         width:30%;
     }
 }
+/*レスポンシブ対応*/
+
+
+
