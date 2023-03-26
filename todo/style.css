@@ -95,6 +95,10 @@ input:checked ~ p{
 }
 
 @media (orientation: portrait) {
+    #todo{
+        width:100px;
+        height:15px;
+    }
     #container {
       flex-direction: column;
       justify-content: center;
@@ -110,5 +114,14 @@ input:checked ~ p{
     #completelist{
         width: 80%;
         margin-top: 10%;
+    }
+    #todolist button{
+        width:50px;
+        font-size: 10px;
+    }
+    
+    #completelist button{
+        width:50px;
+        font-size: 10px;
     }
   }
