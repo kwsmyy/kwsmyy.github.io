@@ -95,6 +95,10 @@ input:checked ~ p{
 }
 
 @media (orientation: portrait) {
+    h1{
+        text-align: center;
+        font-size: 30px;
+    }
     #todo{
         width:100px;
         height:15px;
