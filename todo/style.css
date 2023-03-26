@@ -46,6 +46,7 @@ li {
     background-color: linen;
     margin: 5px;
     display: flex;
+    align-items: center;
 }
 
 input[type=checkbox]{
@@ -92,9 +93,6 @@ button{
 
 input:checked ~ p{
     text-decoration: line-through;
-}
-input[type="checkbox"]{
-    display:flex;
 }
 
 @media (orientation: portrait) {
