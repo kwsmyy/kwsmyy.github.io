@@ -1,0 +1,114 @@
+body{
+    width:90%;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif, "游ゴシック体";
+}
+
+h1{
+    text-align: center;
+    font-size: 5vw;
+}
+
+#todoform{
+    text-align: center;
+}
+
+#todo{
+    width:150px;
+    height:20px;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 5%;
+}
+
+h2{
+text-align: center;
+}
+
+#todolist{
+    width:50%;
+}
+
+#completelist{
+    width: 50%;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    background-color: linen;
+    margin: 5px;
+    display: flex;
+}
+
+input[type=checkbox]{
+    font-size: 10px;
+}
+
+.todolistrow .mytodo{
+    background-color: sandybrown;
+    display: flex;
+    border-radius: 10px;
+}
+
+.mytodo p{
+    width:70%;
+    padding: 5px;
+}
+
+.completelistrow .mytodo{
+    background-color: aquamarine;
+    display: flex;
+    border-radius: 10px;
+}
+
+button{
+    width:60px;
+    font-size: 12px;
+    background-color:lightslategray;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin:auto 1px auto 1px;
+}
+
+#todolist button{
+    width:50px;
+    font-size: 5px;
+}
+
+#completelist button{
+    width:50px;
+    font-size: 5px;
+}
+
+
+input:checked ~ p{
+    text-decoration: line-through;
+}
+
+@media (orientation: portrait) {
+    #container {
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      align-items: center;
+      text-align: center;
+    }
+    #todolist{
+        width:80%;
+        margin-top: 10%;
+
+    }
+    #completelist{
+        width: 80%;
+        margin-top: 10%;
+    }
+  }
