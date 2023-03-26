@@ -13,6 +13,11 @@ h1{
     text-align: center;
 }
 
+#todoform p{
+    text-align: left;
+    margin-left: 40%;
+}
+
 #todo{
     width:150px;
     height:20px;
