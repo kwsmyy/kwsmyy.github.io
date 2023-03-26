@@ -121,11 +121,11 @@ input:checked ~ p{
     }
     #todolist button{
         width:50px;
-        font-size: 10px;
+        font-size: 9px;
     }
     
     #completelist button{
         width:50px;
-        font-size: 10px;
+        font-size: 9px;
     }
   }
