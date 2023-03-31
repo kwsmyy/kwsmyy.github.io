@@ -3,6 +3,26 @@ body {
     background-attachment: fixed;
 }
 
+#opening{
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    transition: 1.5s;
+}
+
+#opening.active{
+    opacity: 1;
+    z-index: 100;
+}
+
+#opening.end{
+    opacity: 0;
+    z-index: -100;
+    transform: scale(2);
+}
+
 #title{
     padding: 3vh;
     margin: 2vh auto 7vh auto;
