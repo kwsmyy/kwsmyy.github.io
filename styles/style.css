@@ -9,7 +9,17 @@ body {
     position: fixed;
     top:0;
     left:0;
-    transition: 1.5s;
+    transition: 2s;
+    font-size: 4vw;
+    text-align: center;
+}
+
+#opening-title{
+    position: fixed;
+    color: linen;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 #opening.active{
@@ -29,7 +39,6 @@ body {
     text-align: center;
     color: linen;
     font-size: 2vw;
-
 }
 
 .video{
