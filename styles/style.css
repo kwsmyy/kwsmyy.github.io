@@ -16,7 +16,7 @@ body {
 
 #opening-title{
     position: fixed;
-    color: linen;
+    color: white;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -37,7 +37,7 @@ body {
     padding: 3vh;
     margin: 2vh auto 7vh auto;
     text-align: center;
-    color: linen;
+    color: white;
     font-size: 2vw;
 }
 
@@ -95,7 +95,7 @@ body {
     height: 100px;
     text-align: center;
     border-radius: 50%;
-    background: linen;
+    background: white;
     opacity: 0.8;
     z-index: 1;
     transition: 1s;
@@ -138,7 +138,7 @@ body {
 #profileclosebtn{
     font-size: 70px;
     padding: 1%;
-    color: linen;
+    color: white;
     cursor: pointer;
 }
 
@@ -157,7 +157,7 @@ body {
 
 .profiletext{
     padding:5% 0 0 0;
-    color: linen;
+    color: white;
     font-size: 15px;
     margin-left: -20px;
 }
@@ -185,7 +185,7 @@ body {
 #contactclosebtn{
     font-size: 70px;
     padding: 1%;
-    color: linen;
+    color: white;
     cursor: pointer;
 }
 
@@ -195,7 +195,7 @@ body {
 
 .contacttext p{
     text-align: center;
-    color: linen;
+    color: white;
     margin-bottom:80px;
     font-size: 20px;
 }
