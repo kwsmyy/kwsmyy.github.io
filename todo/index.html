@@ -3,34 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My todo</title>
+    <title>todo list</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=EB+Garamond&family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <header>
-        <h1>My todo</h1>
+        <h1>my todo</h1>
+        <button class="themabutton"></button>
+        <button class="clearbutton">clear</button>
     </header>
 
-    <div id="todoform">
-        <p>What todo?</p>
-        <input id="todo" type="text">
-        <button id="todobtn">submit</button>
+    <div id="form">
+        <form>
+            <div class="formitem">
+                <label for="todo">タスク</label>
+                <input id="todo" type="text" required>
+            </div>
+            <div class="formitem">
+                <label for="memo">メモ</label>
+                <textarea id="memo" rows="3"></textarea>
+            </div>
+            <div class="formitem">
+                <label for="client">依頼者</label>
+                <input id="client" type="text">
+            </div>
+            <div class="formitem">
+                <label for="date">開始日</label>
+                <input type="date" id="startdate">
+            </div>
+            <div class="formitem">
+                <label for="date">終了日</label>
+                <input type="date" id="enddate">
+            </div>
+            <div class="formitem">
+                <label for="priority">優先度</label>
+                <select id="priority">
+                    <option>高</option>
+                    <option>中</option>
+                    <option>低</option>
+                </select>
+            </div>
+            <div class="formbutton">
+                <button id="submit">+</button>
+            </div>
+        </form>
     </div>
-
 
     <div id="container">
     <div id="todolist">
         <h2>todo list</h2>
-    </div>
-    <div id="completelist">
-        <h2>complete list</h2>
-    </div>  
+        <hr>
+        <ul>
+            <li>
+                <h3>テスト</h3>
+                <p>テスト</p>
+                <p>依頼者</p>
+                <p>開始日</p>
+                <p>終了日</p>
+                <p>優先度</p>
+                <ul>
+                    <li><p><input type="checkbox">テスト</p></li>
+                    <li><p>テスト</p></li>
+                </ul>
+            </li>
+            
+        </ul>
     </div>
 
-    <script src="script.js"></script>
+    <div id="donelist">
+        <h2>done list</h2>
+        <hr>
+        <ul>
+        </ul>
+    </div>
+    </div>
+
+
+
+    <script src="script.js" defer></script>
 </body>
 </html>

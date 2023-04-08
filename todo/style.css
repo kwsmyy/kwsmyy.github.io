@@ -1,137 +1,462 @@
 body{
-    width:90%;
     margin: 0 auto;
-    font-family: 'Montserrat', sans-serif, "游ゴシック体";
+    font-family: 'Montserrat',"游ゴシック体";
+    width: 90%;
+    background-color: rgb(240, 239, 238);
+}
+
+header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left:0;
+    background-color: white;
+    width: 100%;
+    opacity: 0.8;
+    z-index: 2;
+    border-bottom: 1px solid #cccccc;
 }
 
 h1{
+    font-size: 25px;
+    font-family: 'EB Garamond';
+    padding-left: 5%;
+    width: 85%;
+}
+
+.themabutton{
+    margin:auto;
+    background-color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-image: url('./images/themabutton.png');
+}
+
+.clearbutton{
+    margin:auto;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    padding:5px 10px 5px 10px;
+}
+
+.clearbutton:hover{
+    opacity: 0.5;
+}
+
+.themabutton:hover{
+    opacity: 0.5;
+}
+
+h2{
     text-align: center;
-    font-size: 5vw;
-}
-
-#todoform{
-    text-align: center;
-}
-
-#todoform p{
-    text-align: left;
-    margin-left: 40%;
-}
-
-#todo{
-    width:150px;
-    height:20px;
 }
 
 #container{
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    gap: 5%;
+    gap: 10px;
 }
 
-h2{
-text-align: center;
+hr{
+    width: 85%;
 }
 
-#todolist{
+/*formのスタイル*/
+#form{
+    width:50%;
+    background-color:rgb(112, 128, 144);
+    padding: 20px 10px 5px 10px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 0px rgba(81, 79, 79, 0.4);
+    margin: 75px auto 0 auto;
+    
+}
+
+.formitem{
+    margin-bottom: 5px;
+}
+
+.formbutton{
+    text-align: right;
+
+}
+
+input{
+    padding: 5px;
+    width: 30%;
+}
+
+select{
+    padding: 5px;
+    text-align: center;
+}
+
+#submit {    
+    width: 45px;
+    height: 35px;
+    margin-top: 0;
+
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+    background-color:rgb(139, 136, 136);
+}
+
+#submit:hover{
+    opacity: 0.7;
+}
+
+textarea{
+    padding: 5px;
+    resize: none;
+    vertical-align:middle;
+    width: 70%;
+}
+
+label{
+    display: inline-block;
+    text-align: right;
+    width: 50px;
+    font-size: 0.8em;
+}
+.addchildtodoform {
+margin-top:30px;
+margin-bottom: 30px;
+
+}
+
+.addchildtodoform label{
+    width: 60px;
+    text-align: left;
+}
+/*formのスタイル*/
+
+
+#todolist, #donelist{
+    width:50%;
     width:50%;
 }
 
-#completelist{
-    width: 50%;
+
+
+ul{
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
 }
 
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    background-color: linen;
-    margin: 5px;
-    display: flex;
-    align-items: center;
-}
-
-input[type=checkbox]{
-    font-size: 10px;
-}
-
-.todolistrow .mytodo{
-    background-color: sandybrown;
-    display: flex;
-    border-radius: 10px;
-}
-
-.mytodo p{
-    width:70%;
-    padding: 5px;
-}
-
-.completelistrow .mytodo{
-    background-color: aquamarine;
-    display: flex;
-    border-radius: 10px;
-}
-
-button{
-    width:60px;
-    font-size: 12px;
-    background-color:lightslategray;
+li{
+    background-color: white;
     border-radius: 5px;
-    border: none;
+    box-shadow: 3px 3px 3px 0px rgba(81, 79, 79, 0.4);
+    padding: 10px 10px 2px 10px;
+    position:relative;
+    margin: 10px auto;
+    font-size: 15px;
+    line-height: 17px;
+}
+
+.childtodolist{
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 40px;
+    width: 100%;
+
+}
+
+.childtodolist hr{
+    width: 100%;
+}
+
+.childtodolist li{
+    list-style: none;
+    background-color:rgb(112, 128, 144);
     color: white;
-    margin:auto 1px auto 1px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 0px rgba(81, 79, 79, 0.4);
+    padding: 15px 15px 15px 5px;
+    position:relative;
+    margin: 10px 0 10px 5px;
+    font-size: 13px;
+    line-height: 15px;
+    width: 60%;
+    display: flex;
+    opacity:0.8;
 }
 
-#todolist button{
-    width:50px;
-    font-size: 5px;
+.childtodolist input[type="checkbox"]{
+    width:15px;   
 }
-
-#completelist button{
-    width:50px;
-    font-size: 5px;
-}
-
 
 input:checked ~ p{
     text-decoration: line-through;
 }
 
-@media (orientation: portrait) {
-    h1{
-        text-align: center;
-        font-size: 30px;
-    }
-    #todo{
-        width:100px;
-        height:15px;
-    }
-    #container {
-      flex-direction: column;
-      justify-content: center;
-      margin: 0 auto;
-      align-items: center;
-      text-align: center;
-    }
-    #todolist{
-        width:80%;
-        margin-top: 10%;
+h3,p {
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
 
+#donelist li{
+    opacity: 0.5;
+}
+
+.createdate{
+    position: absolute;
+    top:0;
+    right:10px;
+    font-size: 13px;
+}
+
+/*ボタンのスタイル*/
+
+button{
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.deletebtn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: none;
+    width: 35px;
+    height: 35px;
+    background-image: url('./images/deletebutton.png');
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.deletechildbtn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: none;
+    width: 25px;
+    height: 25px;
+    background-image: url('./images/deletechildbutton.png');
+    background-repeat: no-repeat;
+    background-color:rgb(112, 128, 144);
+}
+
+.donebtn{
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+    border: none;
+    width: 34px;
+    height: 34px;
+    background-image: url('./images/donebutton.png');
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.returnbtn{
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+    border: none;
+    width: 34px;
+    height: 34px;
+    background-image: url('./images/returnbutton.png');
+    background-repeat: no-repeat;
+    background-color: rgb(102, 205, 170);
+}
+
+.plusbtn{
+    position: absolute;
+    bottom: 0;
+    right: 80px;
+    border: none;
+    width: 34px;
+    height: 34px;
+    background-image: url('./images/plusbutton.png');
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+#donelist .deletebtn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: none;
+    width: 35px;
+    height: 35px;
+    background-image: url('./images/deletebutton.png');
+    background-repeat: no-repeat;
+    background-color: rgb(102, 205, 170);
+}
+
+.deletebtn:hover{
+    opacity: 0.5;
+}
+
+.deletechildbtn:hover{
+    opacity: 0.5;
+}
+
+.donebtn:hover{
+    opacity: 0.5;
+}
+
+.plusbtn:hover{
+    opacity: 0.5;
+}
+
+.returnbtn:hover{
+    opacity: 0.5;
+}
+/*ボタンのスタイル*/
+
+/*即時編集フォームのスタイル*/
+.editform {
+    margin-top:30px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.editform label{
+    
+    text-align: center;
+    width: 40px;
+
+}
+
+.editform input{
+    padding: 5px;
+    width: 50%;
+
+
+}
+
+.editform textarea{
+    padding: 5px;
+    width: 50%;
+}
+
+.editdonebtn{
+    margin-left: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 5px 3px 5px;
+    font-size: 13px;
+}
+
+.editdonebtn:hover{
+    opacity: 0.5;
+}
+/*即時編集フォームのスタイル*/
+
+
+/*レスポンシブ対応*/
+@media (orientation: portrait) {
+    #form{
+        width: 90%;
+        padding: 10px;
+        font-size: 15px;
     }
-    #completelist{
-        width: 80%;
-        margin-top: 10%;
+
+    h1{
+        font-size: 20px;
     }
-    #todolist button{
-        width:50px;
+    .formitem{
+        margin-bottom: 1px;
+    }
+
+    #submit {    
+        width: 25px;
+        height: 25px;
+    }
+
+    .createdate {
+        font-size: 9px;
+    }
+
+    li{
+        font-size: 10px;
+        line-height: 13px;
+    }
+
+    .deletebtn{
+        width: 10px;
+        height: 10px;
+        background-image: url('./images/deletebutton-mini.png');
+        bottom: 5px;
+        right: 5px;
+    }
+
+    #donelist .deletebtn{
+        width: 10px;
+        height: 10px;
+        background-image: url('./images/deletebutton-mini.png');
+        bottom: 5px;
+        right: 5px;
+    }
+
+    .donebtn{
+        bottom: 5px;
+        right: 25px;
+        width: 10px;
+        height: 10px;
+        background-image: url('./images/donebutton-mini.png');
+    }
+
+    .plusbtn{
+        bottom: 5px;
+        right: 50px;
+        width: 10px;
+        height: 10px;
+        background-image: url('./images/plusbutton-mini.png');
+    }
+
+    .returnbtn{
+        bottom: 5px;
+        right: 25px;
+        width: 10px;
+        height: 10px;
+        background-image: url('./images/returnbutton-mini.png');
+    }
+
+    .clearbutton{
         font-size: 8px;
+        margin-right: 10px;
+    }
+
+    .themabutton{
+        width: 30px;
+        height: 20px;
+        background-image: url('./images/themabutton-mini.png');
+    }
+
+    .editdonebtn{
+        font-size: 10px;
+    }
+
+    .childtodolist li{
+        padding: 5px 5px 5px 2px;
+        margin: 10px 0 10px 5px;
+        font-size: 8px;
+        line-height: 11px;
+        width: 90%;
+        display: flex;
     }
     
-    #completelist button{
-        width:50px;
-        font-size: 8px;
+    .childtodolist input[type="checkbox"]{
+        width:9px;   
     }
-  }
+
+    .addchildtodoform label{
+        width: 45px;
+    }
+}
+/*レスポンシブ対応*/
