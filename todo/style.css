@@ -3,6 +3,7 @@ body{
     font-family: 'Montserrat',"游ゴシック体";
     width: 90%;
     background-color: rgb(240, 239, 238);
+
 }
 
 header{
@@ -193,8 +194,10 @@ li{
 }
 
 .childtodolist input[type="checkbox"]{
-    width:15px;   
+    vertical-align: middle;
+    width: 15px;
 }
+
 
 input:checked ~ p{
     text-decoration: line-through;
@@ -222,6 +225,8 @@ h3,p {
 button{
     transition: 0.5s;
     cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;/*Google Chrome/Safari対応*/
 }
 
 .deletebtn{
@@ -360,6 +365,9 @@ button{
 
 /*レスポンシブ対応*/
 @media (orientation: portrait) {
+    body{
+        -webkit-text-size-adjust: 100%;
+    }
     #form{
         width: 90%;
         padding: 10px;
@@ -466,6 +474,11 @@ button{
 
     .addchildtodoform label{
         width: 45px;
+    }
+
+    .childtodolist input[type="checkbox"]{
+        vertical-align: middle;
+        width: 7px;
     }
 }
 /*レスポンシブ対応*/
