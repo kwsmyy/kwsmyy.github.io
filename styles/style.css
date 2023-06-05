@@ -259,7 +259,6 @@ body {
     width: 100%;
     
     background-color:rgba(0,0,0,0.8);
-    
     display:flex;
     justify-content:center;
     align-items:center;
@@ -376,6 +375,31 @@ body {
     .profileimage{
         width:30%;
     }
+    .portfolioItem{
+        margin-left: 20px;
+        color: white;
+        width: 90%;
+    }
+    .portfolioItem h1{
+        font-size: 20px;
+        border-bottom: 1px solid;
+    }
+    
+    .portfolioItem p{
+        font-size: 12px;
+        margin:0px;
+    }
+    
+    .portfolioItem img{
+        height: 150px;
+        width: 300px;
+    }
+
+    #zoomimg {
+        height: 150px;
+        width: 80%;
+        margin: 0 auto;
+        }
 }
 /*レスポンシブ対応*/
 
