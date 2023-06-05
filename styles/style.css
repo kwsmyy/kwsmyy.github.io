@@ -158,7 +158,7 @@ body {
 .profiletext{
     padding:5% 0 0 0;
     color: white;
-    font-size: 15px;
+    font-size: 20px;
     margin-left: -20px;
 }
 
@@ -200,6 +200,77 @@ body {
     font-size: 20px;
 }
 
+#portfoliopage{
+    background-color: #959dbad1;
+    position: fixed;
+    top: 0;
+    left:-300vw;
+    width: 100vw;
+    height:100vh;
+    transition: 1.2s;
+    overflow: scroll;
+}
+
+#portfolioclosebtn{
+    font-size: 70px;
+    padding: 1%;
+    color: white;
+    cursor: pointer;
+}
+
+#portfolioclosebtn:hover{
+    opacity: 0.5;
+}
+
+.portfolioItem{
+    margin-bottom: 80px;
+    margin-left: 50px;
+    color: white;
+    width: 90%;
+}
+
+.portfolioItem h1{
+    border-bottom: 1px solid;
+}
+
+.portfolioItem p{
+    font-size: 16px;
+}
+
+.portfolioItem a{
+    color: white;
+}
+
+.portfolioItem a:hover{
+   background-color: lightgray;
+}
+
+.portfolioItem img{
+    height: 200px;
+    width: 400px;
+}
+
+#zoomback {
+    position:fixed;
+    top:0;
+    left:0;
+
+    height: 100%;
+    width: 100%;
+    
+    background-color:rgba(0,0,0,0.8);
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    display:none;
+    z-index: 200;
+    }
+    
+    #zoomimg {
+    height: 80%;
+    width: 80%;
+    }
 
 /*メニュー展開*/
 .openmenu .menuitem:nth-child(6) {
@@ -243,6 +314,13 @@ body {
     z-index: 100;
 }
 /*open contact page*/
+
+/*open portfolio page*/
+.openportfolio{
+    transform: translateX(300vw);
+    z-index: 100;
+}
+/*open portfolio page*/
 
 /*下に流れる文字*/
 #flow{
